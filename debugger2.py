@@ -2,6 +2,9 @@ import os
 import json
 import shutil
 
+if not os.path.exists("wrong"):
+	os.makedirs("wrong")
+
 paragraph_count = 0
 total_count = 0
 path = "output"
@@ -14,7 +17,7 @@ for root, dirs, files in os.walk(path):
 					paragraph_count += 1
 				else:
 					print(file)
-					shutil.copy("output/" + file, "wrong/" + file)
+					# shutil.copy("output/" + file, "wrong/" + file)
 				total_count += 1
 
 print()
