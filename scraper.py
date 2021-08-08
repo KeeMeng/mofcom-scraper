@@ -19,8 +19,7 @@ def scrape(link, get_link=False):
 		return (None, None, None, None)
 	except:
 		print("!!! Unexpected error:", sys.exc_info()[0])
-		time.sleep(5)
-		scrape(link, get_link)
+		return (None, None, None, None)
 
 	if "404 Error" in r or "抱歉，您访问的页面不存在！" in r:
 		print("!!! 404 Error")
